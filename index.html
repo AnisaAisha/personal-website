@@ -15,12 +15,41 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="css/stylesheet.css">
+	
+	<script>
+	 $(document).ready(function(){  <!-- Undestand this!! Imp!!-->
+	 $("span.nav-btn").click(function(){
+	   $("ul.nav").slideToggle();
+	 }); 
+	 
+	 $(window).resize(function(){
+	   if($(window).width()>600)
+		  {
+		  $('ul.nav').removeAttr("style");
+		  }
+		if($(window).width()<600)
+		  {
+		  $('ul.nav').css('display','none'); 
+		  }
+		
+	 });
+	 });
+ 
+ 
+	</script>
 </head>
 <body>
 	<header>
 	</header>
-	<div class="navbar navbar-default navbar-fixed-left">
-		<a class="navbar-brand" href="#">LOGO</a>
+	<div class="navbar navbar-default navbar-fixed-left text-center">
+		<button type="button" class="navbar-toggle hidden-lg-up pull-right" data-toggle="collapse" data-target="#myNavbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand hidden-sm hidden-xs" href="#">LOGO</a>
+		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
 				<li><a href="#home"><span> About </span></a></li>
 			    <li><a href="#info"><span> Experience </span></a></li>
@@ -30,16 +59,20 @@
 				<li><a href="#contact"><span> Gallery </span></a></li>
 				<li><a href="#contact"><span> Contact </span></a></li>
 			</ul>
+		</div>
 	</div>
 	<!--end navigation-->
 	<!-- 1st section-->
 	<div class="wrapper">
 		<div class="container" id="home">
 			<div class="row">
-				<img src="images/img.jpg" alt="Nadeem" class="center-image">
-				<h2 style="color: #A9A9A9;"> Hello, I'm </h2>
-				<h1> Nadeem Ahmed </h1>
-				<p style="color: #808080;"> こんにちは (Hello)! I am a Japanese Language translator, interpreter and teacher. Japanese language is my passion. I've dedicated my life to learning and teaching Japanese. </p>
+				<!-- <div class="col-sm-3 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3"> -->
+					<img src="images/img.jpg" alt="Nadeem" class="center-image">
+					<h2 style="color: #A9A9A9;"> Hello, I'm </h2>
+					<h1 style="margin-bottom: 5%; font-family: Arial Black"> Nadeem Ahmed </h1>
+					<div class="center-justify">
+						<p style="color: #808080; font-size: 1.75rem;"> こんにちは (Hello)! I am a Japanese Language translator, interpreter and teacher. Japanese language is my passion. I've dedicated my life to learning and teaching Japanese. </p>
+					</div>
 			</div>
 	</div>
 		<!-- 2nd section-->
