@@ -1,5 +1,5 @@
 .navbar-fixed-left {
-  width: 20vw;
+  width: 20%;
   position: fixed;
   border-radius: 0;
   height: 100%;
@@ -8,15 +8,22 @@
 
 .navbar-fixed-left .navbar-nav > li {
   float: none;  /* Cancel default li float: left */
-  width: 20vw;
+  width: 20%;
 }
 
 .container {
-  height: 1000px;
+	float: right;
+	height: 1000px;
+	max-width: 80%;
+	text-align: center;
 }
 
-.wrapper {
-  margin-left: 22vw;
+.center-justify{
+	margin: 0 auto;
+	width: 60%;
+	text-align: justify;
+	-moz-text-align-last: center;
+	text-align-last: center;
 }
 
 img{
@@ -30,8 +37,4 @@ img{
 	margin: 0 auto;
 	margin-top: 5%;
 	margin-bottom: 5%;
-}
-
-.row{
-	text-align: center;
 }
