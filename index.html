@@ -15,30 +15,11 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	
 	<link rel="stylesheet" href="css/stylesheet.css">
-	
+	<link rel="stylesheet" href="css/lightbox.min.css">
 	<script src="https://kit.fontawesome.com/8990956487.js"></script>
+	<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+	<script src="js/script.js"></script>
 	
-	<script>
-	 $(document).ready(function(){  <!-- Undestand this!! Imp!!-->
-	 $("span.nav-btn").click(function(){
-	   $("ul.nav").slideToggle();
-	 }); 
-	 
-	 $(window).resize(function(){
-	   if($(window).width()>600)
-		  {
-		  $('ul.nav').removeAttr("style");
-		  }
-		if($(window).width()<600)
-		  {
-		  $('ul.nav').css('display','none'); 
-		  }
-		
-	 });
-	 });
- 
- 
-	</script>
 </head>
 <body>
 	<header>
@@ -53,23 +34,22 @@
 		<!--<a class="navbar-brand hidden-sm hidden-xs" href="#">LOGO</a>-->
 		<div class="collapse navbar-collapse" id="myNavbar">
 			<ul class="nav navbar-nav">
-				<li><a href="#home"><span> About </span></a></li>
-			    <li><a href="#info"><span> Experience </span></a></li>
-			    <li><a href="#love"><span> Education </span></a></li>
-			    <li><a href="#work"><span> Services </span></a></li>
-			    <li><a href="#contact"><span> Achievements </span></a></li>
-				<li><a href="#contact"><span> Gallery </span></a></li>
-				<li><a href="#contact"><span> Contact </span></a></li>
+				<li id="nav-about"><a href="#about"><span> About </span></a></li>
+			    <li id="nav-experience"><a href="#experience"><span> Experience </span></a></li>
+			    <li id="nav-education"><a href="#education"><span> Education </span></a></li>
+			    <li id="nav-achievements"><a href="#achievements"><span> Achievements </span></a></li>
+				<li id="nav-gallery"><a href="#gallery"><span> Gallery </span></a></li>
+				<li id="nav-contact"><a href="#contact"><span> Contact </span></a></li>
 			</ul>
 		</div>
 	</div>
 	<!--end navigation-->
 	<!-- 1st section-->
 	<div class="wrapper">
-		<div class="container" id="home">
+		<div class="container hidden" id="about">
 			<div class="row">
 				<!-- <div class="col-sm-3 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3"> -->
-					<img src="images/img.jpg" alt="Nadeem" class="center-image">
+					<img src="images/img.jpg" alt="Nadeem" class="center-image" id="profile-pic">
 					<h2 style="color: #A9A9A9;"> Hello, I'm </h2>
 					<h1 style="margin-bottom: 5%; font-family: Arial Black"> Nadeem Ahmed </h1>
 					<div class="center-justify">
@@ -77,16 +57,16 @@
 					</div>
 			</div>
 			<div class="social-links">
-				<a href="https://www.linkedin.com/in/nadeem-ahmed-159026b6/"><i class="fab fa-linkedin fa-3x" style="color: #A9A9A9; width: 0.2%;"></i></a>
-				<a href="https://www.facebook.com/papajapani"><i class="fab fa-facebook-square fa-3x" style="color: #A9A9A9; width: 0.2%;"></i></a>
+				<a href="https://www.linkedin.com/in/nadeem-ahmed-159026b6/"><i class="fab fa-linkedin fa-3x" style="color: #000000; width: 0.2%;"></i></a>
+				<a href="https://www.facebook.com/papajapani"><i class="fab fa-facebook-square fa-3x" style="color: #000000; width: 0.2%;"></i></a>
 			</div>
 		</div>
 	</div>
 		<!-- 2nd section-->
-	<div class="container" id="info">
+	<div class="container hidden" id="experience">
 		<div class="row">
 			<div class="resume-content">
-				<h1 class="h1-experience">Experience</h1>
+				<h1 class="h1-sections">Experience</h1>
 					<h3 style="font-family: Trebuchet MS; text-align: left;">
 						Japanese Language Interpreter/Assistant
 						<span class="date">  October 2015 - Present </span>
@@ -117,8 +97,54 @@
 	</div>
 	
 	<!-- 3rd section -->
-	<div class="container" id="info">
+	<div class="container hidden" id="education">
 		<div class="row">
+			<div class="resume-content">
+				<h1 class="h1-sections">Education</h1>
+					<h3 style="font-family: Trebuchet MS; text-align: left;">
+						Tokyo Naganuma School of Japanese Language
+					</h3>
+				<h4 style="color: #708090; font-family: Trebuchet MS;">Advanced Japanese Language</h4>
+				<p style="color:#808080; margin-bottom: 8%;"> Preparation for Japanese Language Proficiency Test (JLPT) and other language studies. </p>
+			</div>
 		</div>
 	</div>
+	
+	<!-- 4th section -->
+	<div class="container hidden" id="achievements">
+		<div class="row">
+			<div class="resume-content">
+				<h1 class="h1-sections">Achievements</h1>
+					<h3 style="font-family: Trebuchet MS; text-align: left;">
+						Interpretation of Mr. Osamu Suzuki
+					</h3>
+				<h4 style="color: #708090; font-family: Trebuchet MS;">Advanced Japanese Language</h4>
+				<p style="color:#808080; margin-bottom: 8%;"> During his visit to Pak Suzuki Motor Co, Ltd. Pakistan in August 2007, I interpreted Mr. Osamu Suzuki (CEO and COO of Suzuki Motor Corporation, Japan).</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container hidden" id="gallery">
+		<h1 class="h1-sections">Gallery</h1>
+		<div class="gallery">
+			<a href="images/aec-team.jpg" data-lightbox="myGallery" data-title="AEC Team"><img src="images/aec-team.jpg"></a>
+			<a href="images/image.jpg" data-lightbox="myGallery"><img src="images/image.jpg"></a>
+			<a href="images/team.jpg" data-lightbox="myGallery"><img src="images/team.jpg"></a>
+			<a href="images/me.jpg" data-lightbox="myGallery"><img src="images/me.jpg"></a>
+			<a href="images/jica.jpg" data-lightbox="myGallery"><img src="images/jica.jpg" width="50px" height="150px"></a>
+			<a href="images/team.jpg" data-lightbox="myGallery"><img src="images/team.jpg"></a>
+		</div>
+	</div>
+	
+	<div class="container hidden" id="contact">
+		<h1 class="h1-sections">Contact</h1>
+		<div class="resume-content">
+			<span style="font-size: 1.5em; margin: 3%"> <i class="fas fa-phone-alt"></i> +923222210821</span>
+			<span style="font-size: 1.5em; margin: 3%"> <i class="fas fa-envelope"></i> takebaba54@yahoo.co.jp </span>
+		</div>
+	</div>
+	
 </body>
+<footer>
+
+</footer>
