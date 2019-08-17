@@ -1,3 +1,9 @@
+body{
+	background-image: url("../images/background.png");
+	background-size: contain;
+	background-repeat:repeat-y;
+	
+}
 
 .navbar-fixed-left {
   width: 20%;
@@ -28,6 +34,10 @@ a{
 	text-align: center;
 }
 
+.hidden{
+	display: none;
+}
+
 .center-justify{
 	margin: 0 auto;
 	width: 60%;
@@ -36,7 +46,7 @@ a{
 	text-align-last: center;
 }
 
-img{
+#profile-pic{
 	border-radius: 50%;
 }
 
@@ -60,7 +70,7 @@ img{
 	margin: 3%;
 }
 
-.h1-experience{
+.h1-sections{
 	font-family: Arial Black;
 	text-align: left;
 	margin-bottom: 8% !important;
@@ -70,6 +80,25 @@ img{
 	float: right;
 	font-family: Courier;
 	font-size: 1.8rem;
+}
+
+.gallery{
+	float: none !important;
+}
+
+.gallery a{
+	display: inline;
+}
+
+.gallery img{
+	width: 20%;
+	margin: 1%;
+	filter: grayscale(100%);
+	transition: 1s;
+}
+
+.gallery img:hover{
+	filter: grayscale(0);
 }
 
 @media only screen and (max-width: 400px){
