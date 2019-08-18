@@ -1,3 +1,7 @@
+html{
+	scroll-behavior: smooth;
+}
+
 body{
 	background-image: url("../images/background.png");
 	background-size: contain;
@@ -62,7 +66,6 @@ a{
 
 .social-links a {
 	display: inline;
-	
 }
 
 .resume-content{
@@ -101,8 +104,42 @@ a{
 	filter: grayscale(0);
 }
 
-@media only screen and (max-width: 400px){
+.div-contact{
+	margin: 3%;
+}
+
+input[type=submit]{
+	padding: 20px 50px;
+	border-radius: 45%;
+	background-color: #E88024;
+	color: #FFFFFF;
+}
+
+input[type=submit]:hover{
+	background-color: #FFFFFF;
+	color: #E88024;
+	border: 1.5px solid #E88024;
+	
+}
+
+input[type=submit]:active{
+	background-color: #24A4E8;
+	color: #000000;
+	border: 1.5px solid #24A4E8;
+	
+}
+
+@media screen and (max-width: 450px){
 	.social-links a{
-		margin: 2%;
+		display: block;
+	}
+	
+	/*.resume-content{
+		margin: 4%;
+	}*/
+	
+	.resume-content.date{
+		margin-top: 2%;
+		margin-bottom: 2%;
 	}
 }
